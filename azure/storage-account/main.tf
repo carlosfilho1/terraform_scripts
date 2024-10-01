@@ -14,7 +14,7 @@ resource "azurerm_storage_account" "example" {
   resource_group_name      = module.rg.rg_name
   location                 = var.user_selected_location
   account_tier             = "Standard"
-  account_replication_type = "GRS"
+  account_replication_type = var.type_replication_type
   account_kind             = var.type_SA
 
   tags = {
